@@ -17,6 +17,8 @@ import { EditTeamComponent } from './private/main/teams/team/edit-team/edit-team
 import { MyProfileComponent } from './private/main/profile/my-profile/my-profile.component';
 import { PlayerProfileComponent } from './private/main/profile/player-profile/player-profile.component';
 import { EditProfileComponent } from './private/main/profile/edit-profile/edit-profile.component';
+import { MenuService } from './shared/menu.service';
+import { ClickOutsideDirective } from './shared/click-outside.directive';
 
 
 @NgModule({
@@ -34,13 +36,14 @@ import { EditProfileComponent } from './private/main/profile/edit-profile/edit-p
     AddPlayerComponent,
     MyProfileComponent,
     PlayerProfileComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,
     AppRouting
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

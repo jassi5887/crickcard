@@ -1,13 +1,25 @@
 <header class="container">
-  <div class="header__logo">
-    <p class="header__logo--part1">
-      crick
-    </p>
-    <p class="header__logo--part2">
-      cards
-    </p>
+  <div class="header__bar" (clickOutside)="onMenuToggle(close)">
+    <div class="header__logo">
+        <p class="header__logo--part1">
+          crick
+        </p>
+        <p class="header__logo--part2">
+          cards
+        </p>
+    </div>
+
+    <div class="header__menu-icon">
+      <button (click)="onMenuToggle(true)" 
+        class="button button--no-scale header__menu-button"
+        [ngClass]="{'header__menu-open': menuOpen}">
+        <span></span>
+      </button>
+    </div>
   </div>
-  <nav class="header__nav sidenav">
+  
+  <nav class="header__nav sidenav" 
+      [ngClass]="{'header__nav--hide-nav ': !menuOpen}">
     <ul class="sidenav__container">
       <li class="sidenav__item">
         <a routerLinkActive="active" routerLink="/dashboard" class="sidenav__link">

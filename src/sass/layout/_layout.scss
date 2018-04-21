@@ -11,6 +11,10 @@ body {
 .main-container {
     display: flex;
     min-height: 100vh;
+
+    @include respond(tab-land) {
+        flex-direction: column;
+    }
 }
 
 .main {
