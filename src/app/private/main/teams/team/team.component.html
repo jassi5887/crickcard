@@ -1,0 +1,96 @@
+<div class="page-container__other">
+  <div class="page-container__subheader">
+    <h1 class="page-heading">Rookie XI</h1>
+
+    <a [routerLink]="['../']" class="page-container__close">&times;</a>
+  </div>
+
+  <div class="page-container__content">
+
+    <div class="team__makers">
+      <div class="team__makers__item">
+        <img src="/assets/players/govind.jpg" alt="govind">
+        <div>
+          <p>Govind Singh Parihar</p>
+          <label class="label label--success">captain</label>
+          <label class="label label--warning">admin</label>
+        </div>
+      </div>
+      <div class="team__makers__item">
+        <img src="/assets/players/chetan.jpg" alt="chetan">
+        <div>
+          <p>Chetan Raina</p>
+          <label class="label label--info">vice captain</label>
+        </div>
+      </div>
+      <div class="team__makers__item">
+        <img src="/assets/players/manoj.jpg" alt="manoj">
+        <div>
+          <p>Manoj Mehra</p>
+          <label class="label label--warning">admin</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="team__analytics">
+      <div class="team__analytics__item team__analytics__item--info">
+        <p class="team__analytics__item__title">matches</p>
+        <p class="team__analytics__item__number">25</p>
+      </div>
+      <div class="team__analytics__item team__analytics__item--success">
+        <p class="team__analytics__item__title">won</p>
+        <p class="team__analytics__item__number">15</p>
+      </div>
+      <div class="team__analytics__item team__analytics__item--danger">
+        <p class="team__analytics__item__title">lost</p>
+        <p class="team__analytics__item__number">10</p>
+      </div>
+    </div>
+
+    <div class="players">
+      <h2 class="players__title">Players</h2>
+      <ul class="players__list">
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Manoj</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Govind</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Chetan</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Abinov</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Jatinder</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Khajan</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Puneet</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Sanju</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Rohit</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Kaushal</a>
+        </li>
+        <li class="players__item">
+          <a [routerLink]="['/profile/1']">Anand</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page-container__top-cta">
+      <a [routerLink]="['add']" class="button button--primary">Add Player</a>
+      <a [routerLink]="['edit']" class="button button--warning">Edit Team</a>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

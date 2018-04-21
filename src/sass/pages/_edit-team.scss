@@ -1,0 +1,65 @@
+.edit-team {
+    & .form {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__edit-container {
+            width: 70%;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            background-color: $color-white;
+            box-shadow: 0 .4rem .5rem $color-gray-4;
+
+            &__block {
+                width: 100%;
+            }
+
+            & img {
+                width: 8rem;
+                height: 8rem;
+            }
+
+            &__cta {
+                padding: 0;
+
+                display: flex;
+                & > button {
+                    display: inline-block;
+                    flex: 1;
+                }
+            }
+
+            &__info {
+                display: flex;
+                padding: 0;
+
+                & > p {
+                    flex: 1;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color-primary-light;
+                }
+            }
+        }
+    }
+
+    & .team {
+        &__makers {
+            flex-direction: column;
+
+            &__item {
+                margin-right: 0;
+                margin-bottom: 2rem;
+                &--role {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+        }
+    }
+}

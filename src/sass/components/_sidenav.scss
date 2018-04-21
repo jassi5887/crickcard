@@ -1,0 +1,75 @@
+.sidenav {
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        fill: currentColor;
+        margin-right: 4rem;
+        transition: all .2s;
+    }
+
+    &__item>a:hover>&__icon {
+        transform: scale(1.4);
+    }
+
+    &__item {
+        font-size: 1.6rem;
+        letter-spacing: .5rem;
+        display: flex;
+        color: $color-danger;
+
+        >a:link,
+        >a:visited {
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex: 1;
+            padding: 2rem 0;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            color: $color-danger;
+            transition: color .2s;
+
+            >span {
+                display: inline-block;
+            }
+        }
+
+        >a.active {
+            color: $color-gray-4;
+        }
+
+        >a.active::after {
+            background-color: $color-gray-4;
+            height: 100%;
+        }
+
+        >a::after {
+            content: '';
+            position: absolute;
+            height: 0;
+            right: -$small-double-gutter;;
+            width: 5px;
+            background-color: transparent;
+            transition: all .4s;
+        }
+
+        >a:hover::after {
+            height: 100%;
+            background-color: $color-danger;
+        }
+
+        >a.active:hover::after {
+            background-color: $color-gray-4;
+            height: 100%;
+        }
+    }
+}

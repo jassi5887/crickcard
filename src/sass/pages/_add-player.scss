@@ -1,0 +1,13 @@
+.add-player {
+    & .page-container {
+        &__content {
+            align-items: center;
+        }
+    }
+    & form {
+        margin-top: 5rem;
+        width: 60%;
+        padding: 3rem;
+        background-color: $color-white;
+    }
+}

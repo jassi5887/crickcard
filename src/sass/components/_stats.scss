@@ -1,0 +1,51 @@
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5rem;
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        padding: 2rem;
+        min-width: 15rem;
+        background-color: $color-white;
+        box-shadow: 0 .4rem .4rem $color-gray-4;    
+
+        &--batting-ranking  {
+            background-image: linear-gradient(to right bottom, $color-white, $color-success);
+        }
+
+        &--bowling-ranking  {
+            background-image: linear-gradient(to right bottom, $color-white, $color-info);
+        }
+    }
+
+    &__subtext {
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: $color-gray-5;
+        text-transform: uppercase;
+
+        &--ranking {
+            color: $color-white;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-secondary-light;
+    }
+
+    &__number {
+        font-size: 5rem;
+        font-weight: 100;
+        color: $color-danger;
+    }
+}

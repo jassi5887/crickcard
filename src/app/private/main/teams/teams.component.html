@@ -1,0 +1,37 @@
+<div class="page-container">
+  <div class="page-container__first">
+
+    <h1 class="page-heading">Teams</h1>
+  
+    <div class="team">
+      <a [routerLink]="['1']">
+        <div class="team__logo">
+          <img src="assets/teams/1.png" alt="rookie xi">
+        </div>
+
+        <div class="team__info">
+          <div class="team__name">Rookie XI</div>
+          <div class="team__created-on">03-03-2016</div>
+          <p class="team__text-cta">view</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="team">
+      <a [routerLink]="['1']">
+        <div class="team__logo">
+          <img src="assets/teams/1.png" alt="rookie xi">
+        </div>
+
+        <div class="team__info">
+          <div class="team__name">Tormentors XI</div>
+          <div class="team__created-on">03-03-2016</div>
+          <p class="team__text-cta">view</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  
+  <router-outlet></router-outlet>
+</div>

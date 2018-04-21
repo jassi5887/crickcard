@@ -1,0 +1,133 @@
+<div class="page-container__other edit-team">
+  <div class="page-container__subheader">
+    <h1 class="page-heading">Rookie XI</h1>
+
+    <a [routerLink]="['../']" class="page-container__close">&times;</a>
+  </div>
+
+  <div class="page-container__content">
+    <form id="" class="form" (ngSubmit)="onInfoSubmit()">
+      <div class="form__edit-container">
+        <h2 class="form__title">information</h2>
+        <div class="form__group">
+          <img src="assets/teams/1.png" alt="rookie xi">
+          <label class="form__label" for="teamName">team logo</label>
+          <div *ngIf="infoEditable">
+            <br><br>
+            <input type="file" name="teamLogo" accept="image/*" autofocus="false">
+          </div>
+        </div>
+
+        <div class="form__group">
+          <input id="teamName" 
+                 value="Rookie XI" type="text" 
+                 class="form__input" placeholder="team name" 
+                 disabled
+                 *ngIf="!infoEditable">
+          <input id="teamName" 
+                 value="Rookie XI" type="text" 
+                 class="form__input" placeholder="team name"
+                 autofocus
+                 *ngIf="infoEditable">
+          <label class="form__label" for="teamName">team name</label>
+        </div>
+
+        <div class="form__group">
+          <button (click)="onInfoEdit()" type="button" 
+                  class="form__edit-container__block button button--secondary"
+                  *ngIf="!infoEditable">edit</button>
+          <div class="button__group">
+            <button (click)="onInfoEdit('false')" type="click" class="form__edit-container__block button button--secondary"
+                  *ngIf="infoEditable">cancel</button>
+            <button type="submit" class="form__edit-container__block button button--warning"
+                  *ngIf="infoEditable">update</button>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="form__edit-container">
+        <h2 class="form__title">roles</h2>
+        <div class="team__makers">
+          <div class="team__makers__item">
+            <img src="/assets/players/govind.jpg" alt="govind">
+            <div>
+              <p>Govind Singh Parihar</p>
+              <label class="label label--success">captain</label>
+              <label class="label label--warning">admin</label>
+            </div>
+          </div>
+          <div class="team__makers__item">
+            <img src="/assets/players/chetan.jpg" alt="chetan">
+            <div>
+              <p>Chetan Raina</p>
+              <label class="label label--info">vice captain</label>
+            </div>
+          </div>
+          <div class="team__makers__item">
+            <img src="/assets/players/manoj.jpg" alt="manoj">
+            <div>
+              <p>Manoj Mehra</p>
+              <label class="label label--warning">admin</label>
+            </div>
+          </div>
+        </div>
+
+        <!--<div class="form__group">
+          <button (click)="onRoleEdit()" class="form__edit-container__block button button--secondary">edit</button>
+        </div>-->
+      </div>
+
+      <div class="form__edit-container">
+        <h2 class="form__title">players</h2>
+        <div class="team__makers">
+          <div class="team__makers__item team__makers__item--role">
+            <div class="form__edit-container__info">
+              <img src="/assets/players/govind.jpg" alt="govind">
+              <p>Govind Singh Parihar</p>
+            </div>
+            
+            <div class="form__edit-container__cta">
+              
+              <button class="button button--small button--primary" disabled>make captain</button>
+              <button class="button button--small button--secondary" disabled>make vice captain</button>
+              <button class="button button--small button--warning" disabled>make admin</button>
+              <button class="button button--small button--danger" disabled>remove</button>
+            </div>
+          </div>
+          <div class="team__makers__item team__makers__item--role">
+            <div class="form__edit-container__info">
+              <img src="/assets/players/chetan.jpg" alt="chetan">
+              <p>Chetan Raina</p>
+            </div>
+            
+            <div class="form__edit-container__cta">
+              
+              <button class="button button--small button--primary">make captain</button>
+              <button class="button button--small button--secondary" disabled>make vice captain</button>
+              <button class="button button--small button--warning">make admin</button>
+              <button class="button button--small button--danger">remove</button>
+            </div>
+          </div>
+          <div class="team__makers__item team__makers__item--role">
+            <div class="form__edit-container__info">
+              <img src="/assets/players/manoj.jpg" alt="manoj">
+              <p>Manoj Mehra</p>
+            </div>
+
+            <div class="form__edit-container__cta">
+              <button class="button button--small button--primary">make captain</button>
+              <button class="button button--small button--secondary">make vice captain</button>
+              <button class="button button--small button--warning" disabled>make admin</button>
+              <button class="button button--small button--danger">remove</button>
+            </div>
+          </div>
+        </div>
+        <!--<div class="form__group">
+          <button (click)="onPlayerEdit()" class="form__edit-container__block button button--secondary" 
+                  disabled >update</button>
+        </div>-->
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="page-container__other my-profile">
+  <div class="page-container__subheader">
+    <h1 class="page-heading">My Profile</h1>
+  </div>
+
+  <div class="page-container__content">
+
+    <div class="players__info-container">
+      <img src="assets/players/jatinder.jpg" alt="manoj">
+      
+      <div class="players__info-container__info">
+        <h1>Jatinder Singh</h1>  
+        <div class="players__info-container__labels">
+          <label class="label label--info">opening batsman</label> 
+          <label class="label label--info">right handed batsman</label> 
+          <label class="label label--info">right handed bowler</label>
+          <label class="label label--warning">leg break</label>
+        </div>  
+        <button class="button button--danger button--medium button--rounded button--lift">Logout</button>
+      </div>
+
+    </div>
+    <div class="players__info-container"> 
+      <div class="players__info-container__info players__info-container__info--pinfo">
+        <h2>Personal Information</h2>  
+        <div class="form__group">
+          <div class="form__label">mobile</div>
+          <div class="form__input">8600400398</div>
+        </div>
+        <div class="form__group">
+          <div class="form__label">email</div>
+          <div class="form__input">not linked</div>
+        </div>
+        <div class="form__group">
+          <div class="form__label">date of birth</div>
+          <div class="form__input">not mentioned</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="players__info-container players__info-container--small"> 
+      <a [routerLink]="['./1/edit']" class="button button--warning">Edit Profile</a>
+      <br><br>
+      <button class="button button--danger button-rounded">delete account</button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

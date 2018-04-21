@@ -1,0 +1,104 @@
+.players {
+    margin-top: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-secondary-light;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    &__item:not(:last-child) {
+        margin-right: 1rem;
+    }
+    &__item {
+        list-style: none;
+        min-width: 5rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        padding: 2rem 3rem;
+        border-radius: 100rem;
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        box-shadow: 0 .2rem .4rem $color-gray-4;
+
+        & > a { 
+            padding: 2rem 3rem;
+            color: $color-secondary-light;
+            text-decoration: none;
+        }
+    }
+
+    &__info-container {
+        background-color: $color-white;
+        min-height: 20rem;
+        width: 50%;
+        margin-top: 5rem;
+        align-self: center;
+        position: relative;
+        box-shadow: 0 .5rem .4rem $color-gray-4;
+        display: flex;
+        flex-direction: column;
+
+        &--small {
+            min-height: 10rem;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 7rem;
+            margin-bottom: 2rem;
+
+            & > h1 {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            &--pinfo {
+                margin-top: 0;
+                padding: 2rem;
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+        &__labels {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem 5rem;
+            padding-top: 0;
+
+            & .label {
+                margin-bottom: .7rem;
+            }
+
+            & .label:not(:last-child) {
+                margin-right: .6rem;
+            }
+        }
+
+        & > img {
+            position: absolute;
+            width: 10rem;
+            height: 10rem;
+            top: -4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 1rem;
+            box-shadow: 0 .5rem .4rem $color-gray-5;
+        }
+    }
+}
