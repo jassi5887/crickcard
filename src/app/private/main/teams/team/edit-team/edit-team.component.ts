@@ -13,6 +13,10 @@ export class EditTeamComponent implements OnInit {
   ngOnInit() {
   }
 
+  onInfoSubmit() {
+    
+  }
+
   onInfoEdit(value) {
     if ( value ) {
       this.infoEditable = false;
