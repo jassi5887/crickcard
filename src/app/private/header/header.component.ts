@@ -17,9 +17,12 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  onMenuToggle() {
-    console.log("toggle");
-    this.menuService.toggleMenu();
+  onMenuToggle(value) {
+    if (value === "close") {
+      this.menuService.closeMenu();
+    } else {
+      this.menuService.toggleMenu();
+    }
   }
 
 }
