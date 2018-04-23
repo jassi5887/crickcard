@@ -14,7 +14,7 @@
           <label class="form__label" for="teamName">team logo</label>
           <div *ngIf="infoEditable">
             <br><br>
-            <input type="file" name="teamLogo" accept="image/*" autofocus="false">
+            <input type="file" name="teamLogo" accept="image/*">
           </div>
         </div>
 
@@ -27,7 +27,6 @@
           <input id="teamName" 
                  value="Rookie XI" type="text" 
                  class="form__input" placeholder="team name"
-                 autofocus
                  *ngIf="infoEditable">
           <label class="form__label" for="teamName">team name</label>
         </div>
