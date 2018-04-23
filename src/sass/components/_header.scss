@@ -5,6 +5,12 @@
     text-transform: uppercase;
     background-color: $color-primary-darker;
 
+    @include respond(tab-land) {
+        position: fixed;
+        z-index: 999999;
+        width: 100%;
+    }
+
     &__menu-icon {
         display: none;
     }
