@@ -94,8 +94,14 @@ body {
             width: 100%;
         }
 
-        & > button {
+        & > .button {
             flex: 0 0 50%;
+        }
+
+        @include respond(phone) {
+            & > .button {
+                padding: 2rem;
+            }
         }
     }
 }
