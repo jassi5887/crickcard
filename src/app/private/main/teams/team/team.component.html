@@ -6,6 +6,10 @@
   </div>
 
   <div class="page-container__content">
+    <div class="page-container__top-cta">
+      <a [routerLink]="['add']" class="button button--primary">Add Player</a>
+      <a [routerLink]="['edit']" class="button button--warning">Edit Team</a>
+    </div>
 
     <div class="team__makers">
       <div class="team__makers__item">
@@ -93,11 +97,6 @@
           <a [routerLink]="['/profile/1']">Arvind</a>
         </li>
       </ul>
-    </div>
-
-    <div class="page-container__top-cta">
-      <a [routerLink]="['add']" class="button button--primary">Add Player</a>
-      <a [routerLink]="['edit']" class="button button--warning">Edit Team</a>
     </div>
   </div>
 </div>
