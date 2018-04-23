@@ -71,6 +71,11 @@
             flex: 1;
             display: flex;
 
+            @include respond(tab-port) {
+                margin-bottom: 1rem;
+                flex: 0 0 100%;
+            }
+
             &:not(:last-child) {
                 margin-right: 2rem;
             }
@@ -98,6 +103,10 @@
         justify-content: space-around;
         margin-top: 3rem;
 
+        @include respond(tab-land) {
+            align-self: stretch;
+        }
+
         &__item {
             background-color: $color-white;
             color: $color-secondary-light;
@@ -106,6 +115,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @include respond(tab-land) {
+                flex: 0 0 33%;
+            }
 
             &--success {
                 background-image: linear-gradient(to right bottom, $color-white, $color-success);

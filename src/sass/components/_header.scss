@@ -31,6 +31,14 @@
 
         @include respond(tab-land) { 
             border-bottom: 0;
+
+            &--part1 {
+                font-size: 2rem;
+            }
+
+            &--part2 {
+                font-size: 2.5rem;
+            }
         }
     }
 
@@ -81,7 +89,7 @@
             & > span::after,
             & > span::before {
                 display: inline-block;
-                width: 5rem;
+                width: 4rem;
                 height: 3px;
                 background-color: $color-primary;
             }

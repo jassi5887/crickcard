@@ -14,20 +14,30 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;            
     }
     
     &__item:not(:last-child) {
-        margin-right: 1rem;
+        //margin-right: 1rem;
     }
     &__item {
         list-style: none;
         min-width: 5rem;
+        text-align: center;
         font-size: 1.5rem;
         margin-top: 1rem;
         padding: 2rem 3rem;
         border-radius: 100rem;
         background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         box-shadow: 0 .2rem .4rem $color-gray-4;
+
+        @include respond(tab-port) {
+            flex: 0 0 33%;
+        }
+
+        @include respond(phone) {
+            flex: 0 0 50%;
+        }
 
         & > a { 
             padding: 2rem 3rem;
@@ -46,6 +56,14 @@
         box-shadow: 0 .5rem .4rem $color-gray-4;
         display: flex;
         flex-direction: column;
+
+        @include respond(tab-land) {
+            width: 60%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
 
         &--small {
             min-height: 10rem;
@@ -78,8 +96,9 @@
         &__labels {
             display: flex;
             flex-wrap: wrap;
-            padding: 1rem 5rem;
             padding-top: 0;
+            justify-content: center;
+            align-items: center;
 
             & .label {
                 margin-bottom: .7rem;
