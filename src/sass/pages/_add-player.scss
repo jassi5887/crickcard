@@ -9,5 +9,9 @@
         width: 60%;
         padding: 3rem;
         background-color: $color-white;
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 }
