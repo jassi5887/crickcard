@@ -19,8 +19,10 @@
         transition: all .2s;
     }
 
-    &__item>a:hover>&__icon {
-        transform: scale(1.4);
+    @include respond(gt-tab-land) {
+        &__item>a:hover>&__icon {
+            transform: scale(1.4);
+        } 
     }
 
     &__item {
@@ -66,14 +68,15 @@
             transition: all .4s;
         }
 
-        >a:hover::after {
-            height: 100%;
-            background-color: $color-danger;
-        }
-
-        >a.active:hover::after {
-            background-color: $color-gray-4;
-            height: 100%;
+        @include respond(gt-tab-land) {
+            >a:hover::after {
+                height: 100%;
+                background-color: $color-danger;
+            } 
+            >a.active:hover::after {
+                background-color: $color-gray-4;
+                height: 100%;
+            }
         }
     }
 }
