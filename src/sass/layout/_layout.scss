@@ -54,9 +54,6 @@ body {
     }
 
     &__other {
-        position: absolute;
-        top: 0;
-        left: 0;
         background-color: $color-primary-light;
         width: 100%;
         padding: $small-double-gutter * 2;
