@@ -17,7 +17,6 @@
     }
 
     &:hover:not(:disabled) {
-        backface-visibility: hidden;
         transform: scale(1.1);
     }
 
