@@ -24,10 +24,10 @@ const appRoutes: Routes = [
         ]},
         { path: 'matches', component: MatchesComponent },
         { path: 'profile', component: ProfileComponent, children: [
-            { path: '', component: MyProfileComponent },
-            { path: ':id', component: PlayerProfileComponent, children: [
+            { path: '', component: MyProfileComponent, children: [
                 { path: 'edit', component: EditProfileComponent }
-            ]}
+            ]},
+            { path: ':id', component: PlayerProfileComponent }
         ]}
     ]}
 ];

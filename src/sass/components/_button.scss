@@ -62,6 +62,10 @@
         box-shadow: 0 .4rem .4rem $color-gray-4 ;
     }
 
+    &--block {
+        width: 100%;
+    }
+
     &--no-scale {
         &:hover {
             transform: none !important;
