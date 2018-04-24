@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { slideLeft } from '../../../shared/animations/slideLeft.animation';
+import { slideUp } from '../../../shared/animations/slideUp.animation';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
-  animations: [ slideLeft ],
-  host: { '[@slideLeft]': '' }
+  animations: [ slideUp ],
+  host: { '[@slideUp]': '' }
 })
 export class ProfileComponent implements OnInit {
 

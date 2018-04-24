@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { slideLeft } from '../../../shared/animations/slideLeft.animation';
+import { slideUp } from '../../../shared/animations/slideUp.animation';
 
 @Component({
   selector: 'app-teams',
-  animations: [ slideLeft ],
+  animations: [ slideUp ],
   templateUrl: './teams.component.html',
   styleUrls: ['./teams.component.scss'],
-  host: { '[@slideLeft]': '' }
+  host: { '[@slideUp]': '' }
 })
 export class TeamsComponent implements OnInit {
 
