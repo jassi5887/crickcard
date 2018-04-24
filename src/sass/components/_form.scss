@@ -1,4 +1,14 @@
 .form {
+    width: 60%;
+
+    @include respond(tab-land) {
+        width: 70%;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+    }
+
     &__title {
         letter-spacing: .5rem;
         font-weight: 500;
@@ -131,6 +141,44 @@
     }
 
     &__edit-container {
+        width: 100%;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        background-color: $color-white;
+        box-shadow: 0 .4rem .5rem $color-gray-4;
 
+        &__block {
+            width: 100%;
+        }
+
+        & img {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        &__cta {
+            padding: 0 !important;
+
+            display: flex;
+            flex-wrap: wrap;
+            & > button {
+                display: inline-block;
+                flex: 1;
+            }
+        }
+
+        &__info {
+            display: flex;
+            padding: 0 !important;
+
+            & > p {
+                flex: 1;
+                margin: 0 !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-primary-light;
+            }
+        }
     }
 }

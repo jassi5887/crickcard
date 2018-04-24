@@ -19,6 +19,10 @@ body {
     background-color: $color-primary-light;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 .container {
     padding: 1rem;
 }

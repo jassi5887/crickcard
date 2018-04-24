@@ -1,3 +1,30 @@
 .my-profile {
-    padding-bottom: 20rem;
+    &.edit-profile {
+        & .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .form__group {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
+        & h2 {
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+    &.edit-profile .edit-profile__pinfo {
+        & .form__group {
+            align-items: left;
+            & h2 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
 }

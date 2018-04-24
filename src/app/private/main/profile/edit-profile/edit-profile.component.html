@@ -1,12 +1,74 @@
-<div class="page-container__other my-profile">
+<div class="page-container__other my-profile edit-profile">
   <div class="page-container__subheader">
-    <h1 class="page-heading">Edit Profile</h1>
+    <h1 class="page-heading">edit my profile</h1>
 
-    <a routerLink="/profile" class="page-container__close">&times;</a>
+    <a [routerLink]="['../']" class="page-container__close">&times;</a>
   </div>
 
   <div class="page-container__content">
+    <form id="" class="form" (ngSubmit)="onProfileEditSubmit()">
+      <div class="form__edit-container edit-profile__edit-image">
+        <div class="form__group">
+          <h2 class="form__title">image</h2>
+          <img src="assets/players/jatinder.jpg" alt="jatinder">
+          <h2>Jatinder Singh</h2>  
+          <input type="file" name="playerImage" accept="image/*">
+        </div>
+      </div>
 
-    
+      <div class="form__edit-container">
+        <div class="form__group">
+          <h2 class="form__title">tags</h2>
+          <span class="subtext">click to select/unselect a tag</span>
+          <div class="players__info-container__labels">
+            <button class="label label--info label__selected">
+                opening batsman
+                <span class="label__selected-remove">&times;</span>
+            </button> 
+            <button class="label label--info label__selected">
+              middler order batsman
+              <span class="label__selected-remove">&times;</span>
+            </button> 
+            <button class="label label__select label--info label__selected">
+              right handed batsman
+              <span class="label__selected-remove">&times;</span>
+            </button> 
+            <button class="label label__select label--info label__selected">
+              right handed bowler
+              <span class="label__selected-remove">&times;</span>
+            </button>
+            <button class="label label__select label--warning label__selected">
+              leg break
+              <span class="label__selected-remove">&times;</span>
+            </button>
+            <button class="label label__select label--danger">left handed batsman</button> 
+            <button class="label label__select label--danger">left handed bowler</button> 
+            <button class="label label__select label--info">offbreak</button>
+            <button class="label label__select label--danger">chinaman</button> 
+            <button class="label label__select label--danger">fast bowler</button> 
+            <button class="label label__select label--info">medium fast bowler</button> 
+            <button class="label label__select label--warning">keeper</button> 
+          </div>
+        </div>
+      </div>
+
+      <div class="form__edit-container edit-profile__pinfo">
+        <div class="form__group">
+          <h2 class="form__title">personal information</h2>
+          <div class="form__group">
+            <input id="playerMobile" type="number" class="form__input" value="8600400398" placeholder="mobile" required>
+            <label for="playerMobile" class="form__label">mobile</label>
+          </div>
+          <div class="form__group">
+            <input id="playerEmail" class="form__input" placeholder="email">
+            <label for="playerEmail" class="form__label">email</label>
+          </div>
+          <div class="form__group">
+            <input id="playerDOB" class="form__input" placeholder="date of birth">
+            <label for="playerDOB" class="form__label">date of birth</label>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
