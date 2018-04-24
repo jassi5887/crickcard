@@ -39,12 +39,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     position: relative;
-    overflow: auto;
+    // overflow: auto;
 
     &__subheader {
-        display: flex;
-        flex: 1;
-        justify-content: center;
         position: relative;
     }
 
@@ -57,9 +54,9 @@ body {
         background-color: $color-primary-light;
         width: 100%;
         padding: $small-double-gutter * 2;
-        padding-bottom: 25rem;
         z-index: 99;
-        min-height: 100vh;
+        max-height: 100vh;
+        overflow-x: scroll;
 
         display: flex;
         justify-content: space-between;
