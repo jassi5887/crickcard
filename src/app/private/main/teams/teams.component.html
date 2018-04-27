@@ -3,7 +3,14 @@
 
     <h1 class="page-heading">Teams</h1>
     <div class="center-cta">
-      <a [routerLink]='["create"]' class="button button--primary button--medium button--rounded">Create Team</a>          
+      <div class="center-cta__container">
+        <a [routerLink]='["create"]' class="button button--primary button--medium button--rounded">Create Team</a>
+      </div>
+
+      <div class="center-cta__container">
+        <a [routerLink]='["requests"]' class="button button--warning button--medium button--rounded">Team Requests<span class="center-cta__count">2</span>
+        </a>
+      </div>          
     </div>
 
     <!--<div class="mainNoItemContainer">

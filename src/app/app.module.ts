@@ -23,6 +23,8 @@ import { ClickOutsideDirective } from './shared/click-outside.directive';
 import { CreateTeamComponent } from './private/main/teams/create-team/create-team.component';
 import { PreviousUrlService } from './shared/prevUrl.service';
 import { CreateMatchComponent } from './private/main/matches/create-match/create-match.component';
+import { TeamRequestsComponent } from './private/main/teams/team-requests/team-requests.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { CreateMatchComponent } from './private/main/matches/create-match/create
     EditProfileComponent,
     ClickOutsideDirective,
     CreateTeamComponent,
-    CreateMatchComponent
+    CreateMatchComponent,
+    TeamRequestsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

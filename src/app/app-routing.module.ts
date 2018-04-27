@@ -13,6 +13,8 @@ import { MyProfileComponent } from './private/main/profile/my-profile/my-profile
 import { EditProfileComponent } from './private/main/profile/edit-profile/edit-profile.component';
 import { CreateTeamComponent } from './private/main/teams/create-team/create-team.component';
 import { CreateMatchComponent } from './private/main/matches/create-match/create-match.component';
+import { TeamRequestsComponent } from './private/main/teams/team-requests/team-requests.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
     { path: '', component: PrivateComponent, children: [
@@ -20,6 +22,7 @@ const appRoutes: Routes = [
         { path: 'dashboard', component: DashboardComponent },
         { path: 'teams', component: TeamsComponent, children: [
             { path: 'create', component: CreateTeamComponent },
+            { path: 'requests', component: TeamRequestsComponent },
             { path: ':id', component: TeamComponent, children: [
                 { path: 'add', component: AddPlayerComponent },
                 { path: 'edit', component: EditTeamComponent }
@@ -34,7 +37,9 @@ const appRoutes: Routes = [
             ]},
             { path: ':id', component: PlayerProfileComponent }
         ]}
-    ]}
+    ]},
+    { path: 'page-not-found', component: PageNotFoundComponent }, 
+    { path: '**', redirectTo: 'page-not-found' }
 ];
 
 @NgModule({

@@ -21,7 +21,8 @@
 
     &__logo {
         transition: transform .4s;
-
+        z-index: 0;
+        
         >img {
             width: 8rem;
             height: 8rem;
@@ -39,7 +40,6 @@
         padding: 1rem 5rem;
         padding-left: 8rem;
         margin-left: -6rem;
-        z-index: -1;
         border-radius: 100px;
         box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,.1);
     }
