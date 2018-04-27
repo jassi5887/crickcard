@@ -3,17 +3,24 @@ import { slideUp } from '../../../../shared/animations/slideUp.animation';
 import { PreviousUrlService } from '../../../../shared/prevUrl.service';
 
 @Component({
-  selector: 'app-team',
+  selector: 'app-create-match',
+  templateUrl: './create-match.component.html',
+  styleUrls: ['./create-match.component.scss'],
   animations: [ slideUp ],
-  templateUrl: './team.component.html',
-  styleUrls: ['./team.component.scss'],
   host: { '[@slideUp]': '' }
 })
-export class TeamComponent implements OnInit {
+export class CreateMatchComponent implements OnInit {
+  arrowDown: boolean = false;
 
   constructor(private prevUrlService: PreviousUrlService) { }
 
   ngOnInit() {
   }
+
+  rotateArrow() {
+    this.arrowDown = !this.arrowDown;
+  }
+
+  onCreateMatch() {}
 
 }

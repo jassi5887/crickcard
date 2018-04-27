@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { slideUp } from '../../../../../shared/animations/slideUp.animation';
+import { PreviousUrlService } from '../../../../../shared/prevUrl.service';
 
 @Component({
   selector: 'app-edit-team',
@@ -11,7 +12,7 @@ import { slideUp } from '../../../../../shared/animations/slideUp.animation';
 export class EditTeamComponent implements OnInit {
   infoEditable: boolean = false;
 
-  constructor() { }
+  constructor(private prevUrlService: PreviousUrlService) { }
 
   ngOnInit() {
   }

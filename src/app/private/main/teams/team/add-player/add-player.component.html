@@ -2,11 +2,11 @@
   <div class="page-container__subheader">
     <h1 class="page-heading">Rookie XI</h1>
 
-    <a [routerLink]="['../']" class="page-container__close">&times;</a>
+    <a (click)="prevUrlService.redirectToPrevUrl()" class="page-container__back button button--secondary button--back button--lift">&lsaquo;</a>
   </div>
 
   <div class="page-container__content">
-    <form class="form">
+    <form class="form form--raised">
       <h2 class="form__title">Add Player</h2>
       <div class="form__group">
         <input id="mobile" type="number" class="form__input" placeholder="mobile number" minlength="10" required>

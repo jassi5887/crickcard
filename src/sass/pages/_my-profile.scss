@@ -1,5 +1,10 @@
 .my-profile {
     &.edit-profile {
+        & .page-container {
+            &__content {
+                align-items: center;
+            }
+        }
         & .form {
             display: flex;
             flex-direction: column;

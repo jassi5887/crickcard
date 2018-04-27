@@ -1,0 +1,21 @@
+<div class="page-container__other create-team">
+  <div class="page-container__subheader">
+    <h1 class="page-heading">create team</h1>
+
+    <a (click)="prevUrlService.redirectToPrevUrl()" class="page-container__back button button--secondary button--back button--lift">&lsaquo;</a>
+  </div>
+
+  <div class="page-container__content">
+    <form class="form form--raised" (ngSubmit)="onCreateSubmit()">
+      <div class="form__group">
+        <input id="teamName" class="form__input" type="text" placeholder="team name" required>
+        <label class="form__label" for="teamName">team name</label>
+      </div>  
+
+      <div class="form__group">
+        <button class="button button--primary button--block">create</button>
+      </div>
+
+    </form>
+  </div>
+</div>

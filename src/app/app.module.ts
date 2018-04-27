@@ -20,6 +20,9 @@ import { PlayerProfileComponent } from './private/main/profile/player-profile/pl
 import { EditProfileComponent } from './private/main/profile/edit-profile/edit-profile.component';
 import { MenuService } from './shared/menu.service';
 import { ClickOutsideDirective } from './shared/click-outside.directive';
+import { CreateTeamComponent } from './private/main/teams/create-team/create-team.component';
+import { PreviousUrlService } from './shared/prevUrl.service';
+import { CreateMatchComponent } from './private/main/matches/create-match/create-match.component';
 
 
 @NgModule({
@@ -38,14 +41,16 @@ import { ClickOutsideDirective } from './shared/click-outside.directive';
     MyProfileComponent,
     PlayerProfileComponent,
     EditProfileComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    CreateTeamComponent,
+    CreateMatchComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRouting
   ],
-  providers: [MenuService],
+  providers: [MenuService, PreviousUrlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

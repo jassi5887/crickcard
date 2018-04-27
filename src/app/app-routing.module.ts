@@ -11,18 +11,23 @@ import { AddPlayerComponent } from './private/main/teams/team/add-player/add-pla
 import { PlayerProfileComponent } from './private/main/profile/player-profile/player-profile.component';
 import { MyProfileComponent } from './private/main/profile/my-profile/my-profile.component';
 import { EditProfileComponent } from './private/main/profile/edit-profile/edit-profile.component';
+import { CreateTeamComponent } from './private/main/teams/create-team/create-team.component';
+import { CreateMatchComponent } from './private/main/matches/create-match/create-match.component';
 
 const appRoutes: Routes = [
     { path: '', component: PrivateComponent, children: [
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'teams', component: TeamsComponent, children: [
+            { path: 'create', component: CreateTeamComponent },
             { path: ':id', component: TeamComponent, children: [
                 { path: 'add', component: AddPlayerComponent },
                 { path: 'edit', component: EditTeamComponent }
             ]}
         ]},
-        { path: 'matches', component: MatchesComponent },
+        { path: 'matches', component: MatchesComponent, children: [
+            { path: 'create', component: CreateMatchComponent }
+        ]},
         { path: 'profile', component: ProfileComponent, children: [
             { path: '', component: MyProfileComponent, children: [
                 { path: 'edit', component: EditProfileComponent }

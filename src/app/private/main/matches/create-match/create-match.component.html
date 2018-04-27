@@ -1,0 +1,39 @@
+<div class="page-container__other create-match">
+  <div class="page-container__subheader">
+    <h1 class="page-heading">create match</h1>
+
+    <a (click)="prevUrlService.redirectToPrevUrl()" class="page-container__back button button--secondary button--back button--lift">&lsaquo;</a>
+  </div>
+
+  <div class="page-container__content">
+    <form class="form form--raised" (submit)="onCreateMatch()">
+      <div class="form__group">
+        <div (click)="rotateArrow()" class="match__my-team-select">
+          <div 
+            class="match__my-team-select__arrow"
+            [ngClass]="{'match__my-team-select__arrow--up': !arrowDown}">&lsaquo;</div>          
+          <select name="myTeam" id="myTeam" class="form__input" required>
+            <option disabled selected value="0">Select your team</option>
+            <option value="1">Rookie XI</option>
+            <option value="2">Tormentors XI</option>
+          </select>
+          <label for="myTeam" class="form__label">your team</label>
+        </div>
+      </div>
+      <div class="form__group match__vs">VS</div>
+      <div class="form__group">
+        <div class="match__op-team-select">
+          <input name="myTeam" id="opponentTeam" 
+                class="form__input" placeholder="start typing team name" required>
+      
+          <label for="opponentTeam" class="form__label">opponent team</label>
+        </div>
+      </div>
+
+      <div class="form__group">
+        <button class="button button--primary button--block">create</button>
+      </div>
+    </form>
+  
+  </div>
+</div>

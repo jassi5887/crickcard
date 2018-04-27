@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { slideUp } from '../../../../shared/animations/slideUp.animation';
+import { PreviousUrlService } from '../../../../shared/prevUrl.service';
 
 @Component({
   selector: 'app-player-profile',
@@ -10,7 +11,7 @@ import { slideUp } from '../../../../shared/animations/slideUp.animation';
 })
 export class PlayerProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private prevUrlService: PreviousUrlService) { }
 
   ngOnInit() {
   }

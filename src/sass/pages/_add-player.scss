@@ -6,10 +6,6 @@
     }
     & form {
         margin-top: 5rem;
-        padding: 3rem;
-        background-color: $color-white;
-        box-shadow: 0 .4rem .4rem $color-gray-4;
-
         @include respond(phone) {
             width: 100%;
         }

@@ -9,6 +9,13 @@
         width: 100%;
     }
 
+    &--raised {
+        margin-top: 5rem;
+        padding: 3rem;
+        background-color: $color-white;
+        box-shadow: 0 0.4rem 0.4rem $color-gray-4;
+    }
+
     &__title {
         letter-spacing: .5rem;
         font-weight: 500;

@@ -2,7 +2,16 @@
   <div class="page-container__first">
 
     <h1 class="page-heading">Teams</h1>
-  
+    <div class="center-cta">
+      <a [routerLink]='["create"]' class="button button--primary button--medium button--rounded">Create Team</a>          
+    </div>
+
+    <!--<div class="mainNoItemContainer">
+      <div class="mainNoItemContainer mainNoItemContainer__noItemContainer">
+        <h2>No teams found</h2>
+      </div>
+    </div>-->
+    
     <div class="team">
       <a [routerLink]="['1']">
         <div class="team__logo">

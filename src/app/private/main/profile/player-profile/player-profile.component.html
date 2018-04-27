@@ -2,7 +2,7 @@
   <div class="page-container__subheader">
     <h1 class="page-heading">Player</h1>
 
-    <a [routerLink]="['../']" class="page-container__close">&times;</a>
+    <a (click)="prevUrlService.redirectToPrevUrl()" class="page-container__back button button--secondary button--back button--lift">&lsaquo;</a>
   </div>
 
   <div class="page-container__content">

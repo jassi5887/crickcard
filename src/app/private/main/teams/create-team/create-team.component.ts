@@ -3,17 +3,19 @@ import { slideUp } from '../../../../shared/animations/slideUp.animation';
 import { PreviousUrlService } from '../../../../shared/prevUrl.service';
 
 @Component({
-  selector: 'app-team',
+  selector: 'app-create-team',
+  templateUrl: './create-team.component.html',
+  styleUrls: ['./create-team.component.scss'],
   animations: [ slideUp ],
-  templateUrl: './team.component.html',
-  styleUrls: ['./team.component.scss'],
   host: { '[@slideUp]': '' }
 })
-export class TeamComponent implements OnInit {
+export class CreateTeamComponent implements OnInit {
 
   constructor(private prevUrlService: PreviousUrlService) { }
 
   ngOnInit() {
   }
+
+  onCreateSubmit() {}
 
 }

@@ -5,3 +5,40 @@
     color: $color-gray-5;
     text-transform: uppercase;
 }
+
+.center-cta {
+    display: flex;
+    justify-content: center;
+
+    & > .button {
+        flex: 0 0 20%;
+
+        @include respond(tab-land) {
+            flex: 0 0 50%;
+        }
+    }
+}
+
+.mainNoItemContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    &__noItemContainer {
+        border-radius: 5px;
+        margin-top: 4rem;
+        padding: 5rem;
+        box-shadow: 0 .4rem .4rem $color-gray-4;        
+        background-color: $color-white;
+        width: 70%;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+        
+        & > h2 {
+            font-weight: 500;
+            color: $color-gray-5; 
+            text-transform: uppercase;       
+        }
+    }
+}

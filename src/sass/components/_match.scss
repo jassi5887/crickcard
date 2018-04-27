@@ -1,0 +1,142 @@
+.match {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+
+    &__my-team-select {
+        position: relative;
+
+        &__arrow {
+            position: absolute;
+            font-size: 5rem;
+            right: 5rem;
+            top: 35%;
+            color: $color-secondary-dark;
+            transition: transform .4s;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        &:focus &__arrow {
+             transform: translateY(-50%) rotate(90deg);
+        }
+
+        & select {
+            padding: 2rem 3rem;
+            width: 130%;
+            border: none;
+            box-shadow: 0 .4rem .4rem $color-gray-4;
+            background-color: $color-primary;
+            background-image: none;
+            -webkit-appearance: none;
+        }
+
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &__op-team-select > input {
+        background-color: $color-primary;
+        box-shadow: 0 .4rem .4rem $color-gray-4;
+        padding: 2rem 3rem;
+        
+        &::placeholder {
+            color: $color-gray-5;
+        }
+    }
+
+    &__vs {
+        font-size: 4rem;
+        font-weight: 300;
+        color: $color-gray-5;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex: 0 0 20%;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__date {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: $color-gray-5;
+    }
+
+    &__result {
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: $color-success;
+    }
+
+    &__teams-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $color-white;
+        box-shadow: 0 .4rem .4rem $color-gray-4;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &__my-team {
+
+    }
+
+    &__op-team {
+
+    }
+
+    &__my-team, &__op-team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        flex: 0 0 40%;
+    }
+
+    &__team-logo {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+
+        @include respond(phone) {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+
+    &__team-name {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        color: $color-secondary-dark;
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+
+        @include respond(phone) {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: .2rem;
+        }
+    }
+
+    &--won {
+        border: 3px solid $color-success;
+    }
+
+    &--lost {
+        border: 3px solid $color-danger;
+    }
+}

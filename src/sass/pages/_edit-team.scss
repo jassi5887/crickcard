@@ -1,4 +1,9 @@
 .edit-team {
+    & .page-container {
+        &__content {
+            align-items: center;
+        }
+    }
     & .form {
         
         display: flex;

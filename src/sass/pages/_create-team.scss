@@ -1,0 +1,11 @@
+.create-team {
+    & .page-container {
+        &__content {
+            margin-top: 2rem;
+            align-items: center;
+            & .form {
+                margin-top: 5rem;
+            }
+        }   
+    }
+}
