@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { PreviousUrlService } from './shared/prevUrl.service';
 
 @Component({
   selector: 'app-root',

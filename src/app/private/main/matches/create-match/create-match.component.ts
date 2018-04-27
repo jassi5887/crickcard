@@ -12,7 +12,7 @@ import { PreviousUrlService } from '../../../../shared/prevUrl.service';
 export class CreateMatchComponent implements OnInit {
   arrowDown: boolean = false;
 
-  constructor(private prevUrlService: PreviousUrlService) { }
+  constructor(public prevUrlService: PreviousUrlService) { }
 
   ngOnInit() {
   }

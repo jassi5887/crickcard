@@ -11,7 +11,7 @@ import { PreviousUrlService } from '../../../../shared/prevUrl.service';
 })
 export class PlayerProfileComponent implements OnInit {
 
-  constructor(private prevUrlService: PreviousUrlService) { }
+  constructor(public prevUrlService: PreviousUrlService) { }
 
   ngOnInit() {
   }
