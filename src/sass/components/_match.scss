@@ -59,7 +59,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 70%;
+        width: 60%;
 
         @include respond(phone) {
             width: 100%;
@@ -108,22 +108,23 @@
     }
 
     &__team-logo {
-        width: 9rem;
-        height: 9rem;
+        width: 6rem;
+        height: 6rem;
         border-radius: 50%;
 
         @include respond(phone) {
-            width: 7rem;
-            height: 7rem;
+            width: 5rem;
+            height: 5rem;
         }
     }
 
     &__team-name {
         margin-top: 1rem;
-        font-size: 1.6rem;
+        font-weight: 500;
+        font-size: 1.2rem;
         color: $color-secondary-dark;
         text-transform: uppercase;
-        letter-spacing: .4rem;
+        letter-spacing: .2rem;
 
         @include respond(phone) {
             font-size: 1.2rem;
