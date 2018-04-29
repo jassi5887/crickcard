@@ -144,6 +144,10 @@
         padding: 2rem;
         background-color: $color-white;
 
+        @include respond(phone) {
+            padding: 1rem;
+        }
+
         &__title {
             text-transform: uppercase;
             font-weight: 300;
