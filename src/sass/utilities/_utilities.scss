@@ -10,8 +10,8 @@
     display: flex;
     justify-content: center;
 
-    &__containe {
-        flex: 0 0 50%;
+    &__container {
+        display: flex;
     }
 
     &__container > .button {

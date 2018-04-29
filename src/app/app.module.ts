@@ -25,6 +25,7 @@ import { PreviousUrlService } from './shared/prevUrl.service';
 import { CreateMatchComponent } from './private/main/matches/create-match/create-match.component';
 import { TeamRequestsComponent } from './private/main/teams/team-requests/team-requests.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatchComponent } from './private/main/matches/match/match.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CreateTeamComponent,
     CreateMatchComponent,
     TeamRequestsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MatchComponent
   ],
   imports: [
     BrowserModule,

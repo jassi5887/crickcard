@@ -15,6 +15,7 @@ import { CreateTeamComponent } from './private/main/teams/create-team/create-tea
 import { CreateMatchComponent } from './private/main/matches/create-match/create-match.component';
 import { TeamRequestsComponent } from './private/main/teams/team-requests/team-requests.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatchComponent } from './private/main/matches/match/match.component';
 
 const appRoutes: Routes = [
     { path: '', component: PrivateComponent, children: [
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
             ]}
         ]},
         { path: 'matches', component: MatchesComponent, children: [
-            { path: 'create', component: CreateMatchComponent }
+            { path: 'create', component: CreateMatchComponent },
+            { path: ':id', component: MatchComponent }
         ]},
         { path: 'profile', component: ProfileComponent, children: [
             { path: '', component: MyProfileComponent, children: [

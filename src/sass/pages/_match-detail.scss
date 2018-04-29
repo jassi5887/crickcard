@@ -1,0 +1,11 @@
+.match-detail {
+    & .page-container {
+        &__content {
+            align-items: stretch;
+        }
+    }
+
+    & .match__container:hover {
+        transform: none;
+    }
+}
