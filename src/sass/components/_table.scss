@@ -7,7 +7,7 @@
      &__head {
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid $color-success;
      }
 
      &__head &__row {
@@ -37,17 +37,13 @@
         justify-content: center;
 
         &:first-child {
-            margin-right: auto;
+            flex: 0 1 35%;
             text-align: left;
             flex-wrap: wrap;            
         }
         &:not(:first-child) {
-            flex: 0 0 10%;
             text-align: right;
-
-            @include respond(phone) {
-                flex: 0 0 15%;
-            }
+            flex: 0 1 10%;
         }
      }
 
