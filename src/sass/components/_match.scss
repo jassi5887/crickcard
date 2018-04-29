@@ -95,14 +95,6 @@
         padding-bottom: 2rem;
     }
 
-    &__my-team {
-
-    }
-
-    &__op-team {
-
-    }
-
     &__my-team, &__op-team {
         display: flex;
         flex-direction: column;
@@ -145,5 +137,32 @@
 
     &--lost {
         border: 3px solid $color-danger;
+    }
+
+    &__stats {
+        margin-top: 3rem;
+        padding: 2rem;
+        background-color: $color-white;
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: .4rem;
+            padding-left: .5rem;
+        }
+    }
+
+    &__innings {
+        &__title {
+            text-transform: uppercase;
+            font-weight: 500;
+            padding-left: .5rem;
+        }
+        &__commentary {
+            font-size: 1rem;
+            font-weight: 500;
+            color: $color-gray-5;
+            text-transform: none;
+        }
     }
 }
