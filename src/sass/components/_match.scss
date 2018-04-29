@@ -158,6 +158,10 @@
     }
 
     &__innings {
+        margin-top: 2rem;
+        padding: .4rem;
+        box-shadow: .1rem .4rem .4rem $color-gray-4;
+
         &__title {
             text-transform: uppercase;
             font-weight: 500;
