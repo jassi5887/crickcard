@@ -20,13 +20,33 @@
           <label for="myTeam" class="form__label">your team</label>
         </div>
       </div>
-      <div class="form__group match__vs">VS</div>
-      <div class="form__group">
+      <div class="form__group match__vs" *ngIf="!noOpponent">VS</div>
+      <div class="form__group" *ngIf="!noOpponent">
         <div class="match__op-team-select">
+          <h3 class="text-muted">enter opponent team name if they exist on this portal</h3>
           <input name="myTeam" id="opponentTeam" 
                 class="form__input" placeholder="start typing team name" required>
       
           <label for="opponentTeam" class="form__label">opponent team</label>
+        </div>
+      </div>
+
+      <div class="typeOfScorecard">
+        <h3 class="text-muted">type of scorecard</h3>
+        <div class="form__group">
+          <input id="scroreWithOp" class="form__input" 
+                 type="radio" name="typeOfScorecard" 
+                 value="withOp" checked="checked"
+                 (change)="onScoreCardTypeSelected($event)">          
+          <label class="form__label" for="scroreWithOp">I have opponent team's record</label>
+        </div>
+
+        <div class="form__group">
+          <input id="scroreWithoutOp" class="form__input" 
+                 type="radio" name="typeOfScorecard" 
+                 value="withoutOp"
+                 (change)="onScoreCardTypeSelected($event)">          
+          <label class="form__label" for="scroreWithoutOp">I only want to record my team's scorecard</label>
         </div>
       </div>
 

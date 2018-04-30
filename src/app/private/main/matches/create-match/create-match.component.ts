@@ -11,6 +11,7 @@ import { PreviousUrlService } from '../../../../shared/prevUrl.service';
 })
 export class CreateMatchComponent implements OnInit {
   arrowDown: boolean = false;
+  noOpponent: boolean = false;
 
   constructor(public prevUrlService: PreviousUrlService) { }
 
@@ -22,5 +23,13 @@ export class CreateMatchComponent implements OnInit {
   }
 
   onCreateMatch() {}
+
+  onScoreCardTypeSelected(e) {
+    if (e.target.value === 'withoutOp') {
+      this.noOpponent = true;
+    } else {
+      this.noOpponent = false;
+    }
+  }
 
 }

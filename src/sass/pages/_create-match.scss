@@ -4,4 +4,21 @@
             align-items: center;
         }   
     }
+
+    & .typeOfScorecard {
+
+        & .form__group {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        
+        & .form__label {
+            margin-top: 0;
+        }
+
+        & .form__input {
+            flex: 0 0 5%;
+            box-shadow: none;       
+        }
+    }
 }

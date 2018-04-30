@@ -24,7 +24,7 @@ export const slideUp =
             }),
 
             // animation and styles at end of transition
-            animate('.2s ease-in-out', style({
+            animate('.5s ease-in-out', style({
                 // transition the top position to 0 which slides the content into view
                 transform: 'translateY(0)'
             }))
@@ -33,7 +33,7 @@ export const slideUp =
         // route 'leave' transition
         transition(':leave', [
             // animation and styles at end of transition
-            animate('.2s ease-in-out', style({
+            animate('.5s ease-in-out', style({
                 transform: 'translateY(100rem)'
             }))
         ])
