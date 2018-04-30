@@ -13,40 +13,49 @@
             class="match__my-team-select__arrow"
             [ngClass]="{'match__my-team-select__arrow--up': !arrowDown}">&lsaquo;</div>          
           <select name="myTeam" id="myTeam" class="form__input" required>
-            <option disabled selected value="0">Select your team</option>
+            <option disabled value="">Select your team</option>
             <option value="1">Rookie XI</option>
             <option value="2">Tormentors XI</option>
           </select>
           <label for="myTeam" class="form__label">your team</label>
         </div>
+        <span class="form__required">*</span>
       </div>
       <div class="form__group match__vs" *ngIf="!noOpponent">VS</div>
       <div class="form__group" *ngIf="!noOpponent">
         <div class="match__op-team-select">
-          <h3 class="text-muted">enter opponent team name if they exist on this portal</h3>
+          <h3 class="text-muted">search opponent team and select</h3>
           <input name="myTeam" id="opponentTeam" 
                 class="form__input" placeholder="start typing team name" required>
       
           <label for="opponentTeam" class="form__label">opponent team</label>
         </div>
       </div>
-
+      <div class="form__group match__vs" *ngIf="!noOpponent">OR</div>
       <div class="typeOfScorecard">
         <h3 class="text-muted">type of scorecard</h3>
         <div class="form__group">
-          <input id="scroreWithOp" class="form__input" 
+          <div class="form__radio-group">
+            <input id="scroreWithOp" class="form__radio-input" 
                  type="radio" name="typeOfScorecard" 
                  value="withOp" checked="checked"
                  (change)="onScoreCardTypeSelected($event)">          
-          <label class="form__label" for="scroreWithOp">I have opponent team's record</label>
+            <label class="form__radio-label" for="scroreWithOp">
+              <span class="form__radio-button"></span> I have opponent team's record
+            </label>
+          </div>
         </div>
 
         <div class="form__group">
-          <input id="scroreWithoutOp" class="form__input" 
+          <div class="form__radio-group">
+            <input id="scroreWithoutOp" class="form__radio-input" 
                  type="radio" name="typeOfScorecard" 
                  value="withoutOp"
                  (change)="onScoreCardTypeSelected($event)">          
-          <label class="form__label" for="scroreWithoutOp">I only want to record my team's scorecard</label>
+            <label class="form__radio-label" for="scroreWithoutOp">
+              <span class="form__radio-button"></span> I only want to record my team's scorecard
+            </label>
+          </div>
         </div>
       </div>
 

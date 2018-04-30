@@ -1,3 +1,10 @@
 .player-profile {
-    
+    & .stats-container {
+        width: 70%;
+        align-self: center;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
 }

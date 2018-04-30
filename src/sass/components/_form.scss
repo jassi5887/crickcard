@@ -94,9 +94,9 @@
     }
 
     &__radio-group {
-        width: 49%;
         display: inline-block;
         position: relative;
+        margin: 1rem 0;
     }
 
     &__radio-input {
@@ -117,7 +117,7 @@
         display: inline-block;
         position: absolute;
         left: 0;
-        top: 0;
+        top: -.4rem;
 
         &::after {
             content: '';
