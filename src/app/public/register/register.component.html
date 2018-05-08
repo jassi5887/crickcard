@@ -1,0 +1,66 @@
+<div class="public-page-container">
+  <form class="form form--small form--padded form--bg-white form--raised" 
+        #registrationForm="ngForm"
+        (ngSubmit)="onRegister()">
+    <h1 class="page-heading">register</h1>
+
+    <div class="form__group" [hidden]="!isFormError">
+      <div class="form__error" #formError></div>
+    </div>
+
+    <div class="form__group" *ngIf="otpSent && !otpConfirmed">
+      <input name="confirmOTP" class="form__input" placeholder="enter OTP" #confirmOTP="ngModel" ngModel required>
+      <div class="form__label">enter OTP</div>
+      <span class="form__required">*</span>
+      <span class="form__input__invalid-msg" *ngIf="!confirmOTP.valid && confirmOTP.touched">Please enter OTP!</span>
+    </div>
+
+    <div class="form__group" *ngIf="otpSent && otpConfirmed">
+      <input name="firstName" class="form__input" placeholder="first name" #firstName="ngModel" ngModel required>
+      <div class="form__label">first name</div>
+      <span class="form__required">*</span>
+      <span class="form__input__invalid-msg" *ngIf="!firstName.valid && firstName.touched">invalid First Name!</span>
+    </div>
+
+    <div class="form__group" *ngIf="otpSent && otpConfirmed">
+      <input name="lastName" class="form__input" placeholder="last name" #lastName="ngModel" ngModel required>
+      <div class="form__label">last name</div>
+      <span class="form__required">*</span>
+      <span class="form__input__invalid-msg" *ngIf="!lastName.valid && lastName.touched">invalid Last Name!</span>
+    </div>
+
+    <div class="form__inline-group-container">
+      <div class="form__group form__group--cc">
+        <input id="cc" name="cc" 
+                type="number" class="form__input" 
+                placeholder="country code"
+                [(ngModel)]="defaultCC"
+                [disabled]="otpSent"
+                #cc="ngModel"
+                required>
+        <label for="cc" class="form__label">Country Code</label>
+        <span class="form__input__invalid-msg" *ngIf="!cc.valid && cc.touched && !cc.disabled">Invalid Country Code</span>
+      </div>
+
+      <div class="form__group">
+        <input id="mobile" name="mobile"  class="form__input" 
+                placeholder="your mobile number" 
+                #mobile="ngModel"
+                ngModel 
+                [disabled]="otpSent"
+                required>
+        <label for="mobile" class="form__label">your mobile number</label>
+        <span class="form__required">*</span>
+        <span class="form__input__invalid-msg" *ngIf="!mobile.valid && mobile.touched && !mobile.disabled">invalid Mobile Number!</span>
+      </div>
+    </div>
+
+    <button class="button button--primary button--block" 
+            type="submit"
+            [disabled]="registrationForm.invalid">
+            <span *ngIf="!otpSent">get <b>OTP</b></span>
+            <span *ngIf="otpSent && !otpConfirmed">confirm <b>OTP</b></span>
+            <span *ngIf="otpSent && otpConfirmed">complete registration</span>
+            </button>
+  </form>
+</div>

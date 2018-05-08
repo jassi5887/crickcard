@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationStart } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { AuthService } from './services/auth/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,9 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    constructor() {}
+    constructor(private authService: AuthService,
+                private router: Router) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+    }
 }

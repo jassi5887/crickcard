@@ -8,6 +8,9 @@
     @if $breakpoint == tab-land {
         @media only screen and (max-width: 75em) { @content }; //1200px
     }
+    @if $breakpoint == gt-phone-lt-tab-port {
+        @media only screen and (min-width: 37.6em) and (max-width: 56.24em)  { @content }; //greater than 1200px
+    }
     @if $breakpoint == gt-tab-land {
         @media only screen and (min-width: 75.795em) { @content }; //greater than 1200px
     }

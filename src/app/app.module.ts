@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from "@angular/forms";
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +28,15 @@ import { CreateMatchComponent } from './private/main/matches/create-match/create
 import { TeamRequestsComponent } from './private/main/teams/team-requests/team-requests.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatchComponent } from './private/main/matches/match/match.component';
+import { AuthGuardService } from './services/auth/auth-guard.service';
+import { AuthService } from './services/auth/authentication.service';
+import { PublicComponent } from './public/public.component';
+import { HomeComponent } from './public/home/home.component';
+import { LoginComponent } from './public/login/login.component';
+import { RegisterComponent } from './public/register/register.component';
+import { PublicHeaderComponent } from './public/public-header/public-header.component';
+import { StorageService } from './services/storage/storage.service';
+import { DataService } from './services/data/data.service';
 
 
 @NgModule({
@@ -49,14 +60,28 @@ import { MatchComponent } from './private/main/matches/match/match.component';
     CreateMatchComponent,
     TeamRequestsComponent,
     PageNotFoundComponent,
-    MatchComponent
+    MatchComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    PublicComponent,
+    PublicHeaderComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     AppRouting
   ],
-  providers: [MenuService, PreviousUrlService],
+  providers: [
+    MenuService, 
+    PreviousUrlService,
+    AuthGuardService,
+    AuthService,
+    StorageService,
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

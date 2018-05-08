@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+    //overflow: hidden;
 }
 
 .main-container {
@@ -34,6 +34,21 @@ body {
 
 .header, .page-container {
     border-right: 1px solid $color-gray-2;
+}
+
+.public-page-container {
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.public-animated-container {
+    position: relative;
 }
 
 .page-container {

@@ -25,9 +25,23 @@
         color: $color-secondary-dark;
     }
 
+    &__inline-group-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__group {
         width: 100%;
         position: relative;
+
+        &--cc {
+            flex: 0 0 35%;
+            margin-right: auto;
+        }
+
+        &--cc + & {
+            flex: 0 0 60%;
+        }
     }
 
     &__group:not(:last-child) {
@@ -64,6 +78,7 @@
 
         &::-webkit-input-placeholder {
             color: $color-gray-4;
+            font-size: 1.4rem;
         }
 
         &:disabled {
@@ -73,6 +88,13 @@
 
         &:disabled:hover {
             cursor: not-allowed;
+        }
+
+        &__invalid-msg {
+            color: $color-danger;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
         }
 
     }
@@ -187,5 +209,37 @@
                 background-color: $color-primary-light;
             }
         }
+    }
+
+    &__error {
+        background-color: rgba($color-danger, .8);
+        color: $color-white;
+        padding: 2rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+    }
+
+    &--small {
+
+        width: 40%;
+
+        @include respond(gt-phone-lt-tab-port) {
+            width: 60%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+    }
+
+    &--padded {
+        padding: 2rem;
+    }
+
+    &--bg-white {
+        background-color: $color-white;
     }
 }

@@ -1,0 +1,52 @@
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $color-white;
+    text-transform: uppercase;
+
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    &__logo {
+        
+        &--1 {
+            font-size: 2rem;
+            font-weight: 100;
+            color: $color-secondary-dark;
+        }
+
+        &--2 {
+            font-size: 4rem;
+            font-weight: 500;    
+            color: $color-secondary-dark;        
+        }
+    }
+
+    &__cta {
+        display: flex;
+        border-left: 1px solid $color-primary;
+    }
+
+    &__link {
+        color: $color-secondary-dark;
+
+        &.active {
+            border-bottom: 2px solid $color-gray-4;
+        }
+
+        @include respond(phone) {
+            padding: .5rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+}

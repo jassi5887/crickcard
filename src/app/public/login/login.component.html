@@ -1,0 +1,52 @@
+<div class="public-page-container">
+  <form 
+    class="form form--small form--padded form--bg-white form--raised"
+    (ngSubmit)="onLogin()"
+    #loginForm="ngForm">
+    <h1 class="page-heading">login</h1>
+
+    <div class="form__group" [hidden]="!isFormError">
+      <div class="form__error" #formError></div>
+    </div>
+    
+    <div class="form__group" *ngIf="otpSent && !otpConfirmed">
+      <input name="confirmOTP" class="form__input" placeholder="enter OTP" #confirmOTP="ngModel" ngModel required>
+      <div class="form__label">enter OTP</div>
+      <span class="form__required">*</span>
+      <span class="form__input__invalid-msg" *ngIf="!confirmOTP.valid && confirmOTP.touched">Please enter OTP!</span>
+    </div>
+
+    <div class="form__inline-group-container">
+      <div class="form__group form__group--cc">
+        <input id="cc" name="cc" 
+                type="number" class="form__input" 
+                placeholder="country code"
+                [(ngModel)]="defaultCC"
+                [disabled]="otpSent"
+                #cc="ngModel"
+                required>
+        <label for="cc" class="form__label">Country Code</label>
+        <span class="form__input__invalid-msg" *ngIf="!cc.valid && cc.touched && !cc.disabled">Invalid Country Code</span>
+      </div>
+
+      <div class="form__group">
+        <input id="mobile" name="mobile"  class="form__input" 
+                placeholder="mobile number" 
+                #mobile="ngModel"
+                ngModel 
+                [disabled]="otpSent"
+                required>
+        <label for="mobile" class="form__label">mobile number</label>
+        <span class="form__required">*</span>
+        <span class="form__input__invalid-msg" *ngIf="!mobile.valid && mobile.touched && !mobile.disabled">Invalid Mobile Number!</span>
+      </div>
+    </div>
+
+    <button class="button button--primary button--block" 
+            type="submit"
+            [disabled]="loginForm.invalid">
+            <span *ngIf="!otpSent">get <b>OTP</b></span>
+            <span *ngIf="otpSent && !otpConfirmed">confirm <b>OTP</b></span>
+    </button>
+  </form>
+</div>

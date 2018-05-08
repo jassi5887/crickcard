@@ -16,9 +16,14 @@ import { CreateMatchComponent } from './private/main/matches/create-match/create
 import { TeamRequestsComponent } from './private/main/teams/team-requests/team-requests.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatchComponent } from './private/main/matches/match/match.component';
+import { AuthGuardService } from './services/auth/auth-guard.service';
+import { PublicComponent } from './public/public.component';
+import { LoginComponent } from './public/login/login.component';
+import { RegisterComponent } from './public/register/register.component';
+import { HomeComponent } from './public/home/home.component';
 
 const appRoutes: Routes = [
-    { path: '', component: PrivateComponent, children: [
+    { path: '', component: PrivateComponent, canActivate: [AuthGuardService], children: [
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'teams', component: TeamsComponent, children: [
@@ -39,6 +44,12 @@ const appRoutes: Routes = [
             ]},
             { path: ':id', component: PlayerProfileComponent }
         ]}
+    ]},
+    { path: '', component:  PublicComponent, children: [
+        { path: '', redirectTo: 'home', pathMatch: 'full' },
+        { path: 'home', component: HomeComponent },
+        { path: 'login', component: LoginComponent },
+        { path: 'register', component: RegisterComponent }
     ]},
     { path: 'page-not-found', component: PageNotFoundComponent }, 
     { path: '**', redirectTo: 'page-not-found' }
