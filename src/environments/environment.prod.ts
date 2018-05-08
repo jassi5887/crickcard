@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_domain: "https://www.crickcard-api.herokuapp.com"
+  api_domain: "https://crickcard-api.herokuapp.com"
 };
