@@ -16,6 +16,12 @@
         display: flex;
     }
 
+    @include respond(tab-land) {
+        &:hover {
+            transform: none!important;
+        }
+    }
+
     @include respond(gt-tab-land) {
         &:hover:not(:disabled) {
             transform: scale(1.1);
