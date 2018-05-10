@@ -64,7 +64,8 @@
         display: flex;
         margin-top: 3rem;
         flex-wrap: wrap;
-
+        width: 90%;
+        align-self: center;
         &__item {
             background-color: $color-white;
             box-shadow: 0 .4rem .5rem $color-gray-4;
