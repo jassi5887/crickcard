@@ -84,6 +84,7 @@
         &:disabled {
             background-color: rgba($color-gray-4, .5);
             color: $color-gray-5;
+            -webkit-text-fill-color: $color-gray-5;
         }
 
         &:disabled:hover {
