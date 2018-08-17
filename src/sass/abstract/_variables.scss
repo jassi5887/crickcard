@@ -21,6 +21,11 @@ $color-success: #35C2BD;
 $color-warning: #FF9F68;
 $color-danger: #D02E77;
 
+//spinner colors
+$spinner-dimensions: 5rem; //width and height of spinner block 
+$spinner-3-bg: $color-success; //spinner-3 background-color
+
+
 //spacing
 $small-gutter: 1rem;
 $small-double-gutter: 2rem;

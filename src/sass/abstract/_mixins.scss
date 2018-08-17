@@ -18,3 +18,11 @@
         @media only screen and (min-width: 112.5em) { @content }; //1800px
     }
 }
+
+@mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}

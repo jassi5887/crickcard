@@ -1,4 +1,8 @@
 .my-profile {
+    & .subtext {
+        text-align: center;
+    }
+    
     &.edit-profile {
         & .page-container {
             &__content {
@@ -26,6 +30,9 @@
     &.edit-profile .edit-profile__pinfo {
         & .form__group {
             align-items: left;
+            & .form__label {
+                align-self: baseline;
+            }
             & h2 {
                 margin-left: auto;
                 margin-right: auto;

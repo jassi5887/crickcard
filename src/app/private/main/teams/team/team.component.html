@@ -12,12 +12,18 @@
     </div>
 
     <div class="team__makers">
-      <div class="team__makers__item">
+      <div *ngIf="team?.captain" class="team__makers__item">
         <img src="/assets/players/govind.jpg" alt="govind">
         <div>
-          <p>Govind Singh Parihar</p>
+          <p>{{team?.captan?.firstName}}&nbsp;{{team?.captan?.lastName}}</p>
           <label class="label label--success">captain</label>
           <label class="label label--warning">admin</label>
+        </div>
+      </div>
+      <div *ngIf="!team?.captain" class="team__makers__item">
+        <div class="team__no-team-maker">
+          <p class="team__no-team-maker--text">no captain assigned</p>
+          <p class="team__no-team-maker--subtext">edit team to assign captain</p>
         </div>
       </div>
       <div class="team__makers__item">

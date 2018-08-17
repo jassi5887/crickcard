@@ -29,8 +29,9 @@ export class AuthService {
         return this.storageService.getAuthToken() !== null;
     }
     
-    authenticate(token) {
+    authenticate(token, user) {
         this.storageService.storeAuthToken(token);
+        this.storageService.setLoggedInUser(user);
     }
 
     login(payload, loginStep) {

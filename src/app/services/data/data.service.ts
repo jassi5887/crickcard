@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { Subject } from 'rxjs/Subject';
+import { Profile } from '../../private/models/profile.model';
+import { Team } from '../../private/models/team.model';
 
 @Injectable()
 export class DataService {
-    private userData;
+    private userData: Profile;
+    private teamsData: Team[];
+    
+    userDataSet = new Subject<boolean>();
+    teamsDataSet = new Subject<boolean>();
+    newTeamAdded = new Subject<Team>();
+    
     private CONSTANTS = {
         "API_DOMAIN": environment.api_domain
     };
@@ -16,8 +25,23 @@ export class DataService {
         return this.userData;
     }
 
-    setUserData(user) {
-        this.userData = user;
+    setUserData(profile: Profile) {
+        this.userData = profile;
+        this.userDataSet.next(true);
+    }
+
+    getTeamsData() {
+        return this.teamsData;
+    }
+
+    setTeamsData(teams: Team[]) {
+        this.teamsData = teams;
+        this.teamsDataSet.next(true);
+    }
+
+    addTeam(team: Team) {
+        this.teamsData.push(team);
+        this.newTeamAdded.next(team);
     }
 
     removeUserData() {

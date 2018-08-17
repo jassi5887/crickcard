@@ -5,6 +5,8 @@ import { AuthService } from '../../services/auth/authentication.service';
 import { DataService } from '../../services/data/data.service';
 import { HttpResponse } from "@angular/common/http";
 import { Router } from '@angular/router';
+import { User } from '../../private/models/user.model';
+import { Profile } from '../../private/models/profile.model';
 
 @Component({
   selector: 'app-register',
@@ -147,8 +149,9 @@ export class RegisterComponent implements OnInit {
               .subscribe((data: HttpResponse<any>) => {
                 console.log("X-AUTH: \n", data.headers.get('x-auth'));
                 if (data.headers.get("x-auth")) {
-                  this.authService.authenticate(data.headers.get("x-auth"));
-                  this.dataService.setUserData(data.body);
+                  const profile: Profile = data.body;
+                  this.authService.authenticate(data.headers.get("x-auth"), profile);
+                  this.dataService.setUserData(profile);
                   this.router.navigate(['/']);
                 } else {
                   this.rgForm.reset();

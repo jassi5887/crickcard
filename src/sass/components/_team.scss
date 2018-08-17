@@ -99,6 +99,21 @@
         }
     }
 
+    &__no-team-maker {
+        margin: 0 auto;
+        &--text {
+            font-style: italic;
+            text-align: center;
+            color: $color-danger !important;
+            font-weight: 500 !important;
+        }
+
+        &--subtext {
+            color: $color-info;
+            font-weight: 500 !important;
+        }
+    }
+
     &__analytics {
         display: flex;
         justify-content: space-around;

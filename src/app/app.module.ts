@@ -37,7 +37,10 @@ import { RegisterComponent } from './public/register/register.component';
 import { PublicHeaderComponent } from './public/public-header/public-header.component';
 import { StorageService } from './services/storage/storage.service';
 import { DataService } from './services/data/data.service';
-
+import { UserBackend } from './services/backend/user-backend.service';
+import { LoaderService } from './services/data/loader.service';
+import { LoaderComponent } from './private/main/loader/loader.component';
+import { TeamBackendService } from './services/backend/team-backend.service';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,8 @@ import { DataService } from './services/data/data.service';
     LoginComponent,
     RegisterComponent,
     PublicComponent,
-    PublicHeaderComponent
+    PublicHeaderComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,10 @@ import { DataService } from './services/data/data.service';
     AuthGuardService,
     AuthService,
     StorageService,
-    DataService
+    DataService,
+    UserBackend,
+    LoaderService,
+    TeamBackendService
   ],
   bootstrap: [AppComponent]
 })

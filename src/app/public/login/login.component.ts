@@ -119,8 +119,9 @@ export class LoginComponent implements OnInit {
                 this.authService.login(payload, this.loginStep)
                     .subscribe((data: HttpResponse<any>) => {
                       if (data.headers.get("x-auth")) {
-                        this.authService.authenticate(data.headers.get("x-auth"));
-                        this.dataService.setUserData(data.body);
+                        const user = data.body;
+                        this.authService.authenticate(data.headers.get("x-auth"), user);
+                        this.dataService.setUserData(user);
                         this.otpConfirmed = true;
                         this.router.navigate(['/']);
                       } else {

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { slideUp } from '../../../../shared/animations/slideUp.animation';
 import { PreviousUrlService } from '../../../../shared/prevUrl.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { TeamBackendService } from '../../../../services/backend/team-backend.service';
+import { DataService } from '../../../../services/data/data.service';
+import { Team } from '../../../models/team.model';
 
 @Component({
   selector: 'app-team',
@@ -11,19 +14,20 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   host: { '[@slideUp]': '' }
 })
 export class TeamComponent implements OnInit {
+  team: Team;
 
   constructor(public prevUrlService: PreviousUrlService,
               private route: ActivatedRoute,
-              private router: Router ) { }
+              private router: Router,
+              private teamBackendService: TeamBackendService,
+              private dataService: DataService ) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
-      const paramId: any = +params.id;
-      if (typeof paramId === 'number' && !isNaN(paramId)) {
-        // do somethin
-      } else {
-        this.router.navigate(['page-not-found']);
-      }
+      this.teamBackendService.getTeam(params.id).subscribe((team: Team) => {
+        this.team = team;
+        console.log(this.team);
+      });
     });
   }
 

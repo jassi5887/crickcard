@@ -9,7 +9,7 @@
       <img src="assets/players/jatinder.jpg" alt="manoj">
       
       <div class="players__info-container__info">
-        <h1>Jatinder Singh</h1>  
+        <h1>{{profile?.firstName || '...'}}&nbsp;{{profile?.lastName || '...'}}</h1>  
         <div class="players__info-container__labels">
           <label class="label label--info">opening batsman</label> 
           <label class="label label--info">right handed batsman</label> 
@@ -25,15 +25,22 @@
         <h2>Personal Information</h2>  
         <div class="form__group">
           <div class="form__label">mobile</div>
-          <div class="form__input">8600400398</div>
+          <div class="form__input">{{profile?.user?.mobile || '...'}}</div>
         </div>
-        <div class="form__group">
+        <!--<div class="form__group">
           <div class="form__label">email</div>
-          <div class="form__input">not linked</div>
-        </div>
+          <div class="form__input">
+            <span *ngIf="myUserData.email">{{myUserData?.profile?.email}}</span>
+            <span *ngIf="!myUserData.email">not linked</span>
+          </div>
+        </div>-->
         <div class="form__group">
           <div class="form__label">date of birth</div>
-          <div class="form__input">not mentioned</div>
+          <div class="form__input">
+            {{profile?.dob || 'not mentioned'}}
+            <!--<span *ngIf="myUserData.dob">{{myUserData.profile.dob || ''}}</span>
+            <span *ngIf="!myUserData.dob">not mentioned</span>-->
+          </div>
         </div>
       </div>
     </div>

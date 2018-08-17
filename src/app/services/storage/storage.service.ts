@@ -13,4 +13,12 @@ export class StorageService {
     removeAuthToken() {
         localStorage.removeItem("x-auth");
     }
+
+    setLoggedInUser(user) {
+        localStorage.setItem("crickUser", user);
+    }
+
+    getLoggedInUser() {
+        return localStorage.getItem("crickUser");
+    }
 }
